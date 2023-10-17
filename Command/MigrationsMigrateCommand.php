@@ -22,7 +22,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class MigrationsMigrateCommand extends MigrateCommand
 {
-    protected function configure()
+    protected function configure(): void
     {
         parent::configure();
 
@@ -32,7 +32,7 @@ class MigrationsMigrateCommand extends MigrateCommand
         ;
     }
 
-    public function execute(InputInterface $input, OutputInterface $output)
+    public function execute(InputInterface $input, OutputInterface $output): int
     {
         /** @var Application $application */
         $application = $this->getApplication();

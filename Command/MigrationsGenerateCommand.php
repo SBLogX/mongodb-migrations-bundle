@@ -22,7 +22,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class MigrationsGenerateCommand extends GenerateCommand
 {
-    protected function configure()
+    protected function configure(): void
     {
         parent::configure();
 
@@ -32,7 +32,7 @@ class MigrationsGenerateCommand extends GenerateCommand
         ;
     }
 
-    public function execute(InputInterface $input, OutputInterface $output)
+    public function execute(InputInterface $input, OutputInterface $output): int
     {
         /** @var Application $application */
         $application = $this->getApplication();
